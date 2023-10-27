@@ -7,9 +7,6 @@ interface TypedDataField {
 
 export function getEthTypesFromInputDoc(input: object, primaryType: string = "Document"): object {
     const res = getEthTypesFromInputDocHelper(input, primaryType);
-    if (!res.has("Proof")) {
-        throw new Error("No proof was found on input document");
-    }
     let obj = Object.fromEntries(res);
     obj = { 
         "EIP712Domain": [

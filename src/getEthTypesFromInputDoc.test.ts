@@ -15,12 +15,6 @@ const specExampleInputDoc = {
     },
     "telephone": "(425) 123-4567",
     "email": "jane.doe@example.com",
-    "proof": {
-        "verificationMethod": "did:fake" + "#controller",
-        "created": "date: fake",
-        "proofPurpose": "assertionMethod",
-        "type": "EthereumEip712Signature2021",
-    }
 }
 
 const specExampleTypes = {
@@ -35,10 +29,6 @@ const specExampleTypes = {
         { name: "email", type: "string" },
         { name: "name", type: "Name" },
         { name: "otherData", type: "OtherData" },
-        {
-            name: "proof",
-            type: "Proof",
-        },
         { name: "telephone", type: "string" }
     ],
     Name: [
@@ -49,24 +39,6 @@ const specExampleTypes = {
         { name: "jobTitle", type: "string" },
         { name: "school", type: "string" }
     ],
-    Proof: [
-        {
-          name: "created",
-          type: "string",
-        },
-        {
-          name: "proofPurpose",
-          type: "string",
-        },
-        {
-          name: "type",
-          type: "string",
-        },
-        {
-          name: "verificationMethod",
-          type: "string",
-        }
-      ],
 };
 
 const socialMediaProfileLinkage = {
@@ -85,12 +57,6 @@ const socialMediaProfileLinkage = {
         "id": "https://beta.api.schemas.serto.id/v1/public/social-media-linkage-credential/1.0/json-schema.json",
         "type": "JsonSchemaValidator2018",
     },
-    "proof": {
-        "verificationMethod": "did:fake" + "#controller",
-        "created": "date: fake",
-        "proofPurpose": "assertionMethod",
-        "type": "EthereumEip712Signature2021",
-    }
 }
 
 const socialMediaProfileLinkageTypes = {
@@ -121,10 +87,6 @@ const socialMediaProfileLinkageTypes = {
         type: "string",
       },
       {
-        name: "proof",
-        type: "Proof",
-      },
-      {
         name: "type",
         type: "string[]",
       },
@@ -146,24 +108,6 @@ const socialMediaProfileLinkageTypes = {
       },
       {
         name: "socialMediaProfileUrl",
-        type: "string",
-      }
-    ],
-    Proof: [
-      {
-        name: "created",
-        type: "string",
-      },
-      {
-        name: "proofPurpose",
-        type: "string",
-      },
-      {
-        name: "type",
-        type: "string",
-      },
-      {
-        name: "verificationMethod",
         type: "string",
       }
     ],
